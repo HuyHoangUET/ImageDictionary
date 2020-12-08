@@ -25,18 +25,4 @@ class DataManager {
             }
         }
     }
-    func getImage(url: String, completion: @escaping (UIImage) ->()) {
-        var image = UIImage()
-        guard url != "" else { return }
-        AF.request(url).responseImage {
-            response in
-            if response.data != nil {
-                let data = response.data
-                image = UIImage(data: data!, scale: 1) ?? UIImage()
-                completion(image)
-            } else {
-                print(response.error as Any)
-            }
-        }
-    }
 }

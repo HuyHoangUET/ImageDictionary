@@ -1,14 +1,14 @@
 //
-//  Protocols.swift
+//  UserTableViewCellDelegate.swift
 //  HitsManager
 //
-//  Created by LTT on 11/12/20.
+//  Created by LTT on 27/11/2020.
 //
 
 import Foundation
 import UIKit
 
-protocol HitCollectionViewDelegate: class {
+protocol UserTableViewCellDelegate: class {
     func didLikeImage(id: Int)
     func didDisLikeImage(id: Int)
 }
